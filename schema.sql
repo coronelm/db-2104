@@ -6,3 +6,4 @@ CREATE TABLE enrollments ( enroll_id INT PRIMARY KEY, student_id INT, class_id I
 CREATE TABLE grades ( grade_id INT PRIMARY KEY, student_id INT, subject VARCHAR(50), grade FLOAT, FOREIGN KEY (student_id) REFERENCES students(student_id);
 CREATE TABLE departments (dept_id INT PRIMARY KEY, dept_name VARCHAR(50));
 CREATE TABLE subjects (subject_id INT PRIMARY KEY, subject_name VARCHAR(50), dept_id INT, FOREIGN KEY (dept_id) REFERENCES departments(dept_id);
+CREATE TABLE attendance (attendance_id INT PRIMARY KEY, student_id INT, date DATE, status VARCHAR(10), FOREIGN KEY (student_id) REFERENCES students(student_id);
